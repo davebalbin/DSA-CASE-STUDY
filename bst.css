@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("bst bg.png");
+  background-size: cover;
+  background-position: center;
+  font-family: "Press Start 2P", sans-serif;
+  color: white;
+}
+
+html,
+body {
+  overflow: hidden;
+  height: 100%;
+}
+
+.glow {
+  color: white;
+  font-size: 48px;
+  text-shadow: 0 0 15px gray, 0 0 10px white, 0 0 20px green;
+}
+
+.container {
+  width: 1000px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.left-container {
+  display: flex;
+  width: 100%;
+  margin-top: 20px; /* Adjust as needed */
+  margin-right: 400px;
+}
+
+.input-section {
+  width: 100%;
+  height: 100px;
+  margin-left: 400px;
+  margin-top: 100px;
+  font-size: large;
+}
+
+.input {
+  margin-bottom: 10px;
+  width: 500px; /* Increased width */
+  height: 50px; /* Increased height */
+  font-size: 20px; /* Larger font for better readability */
+  font-family: "Press Start 2P", sans-serif;
+  color: gray;
+  padding: 5px; /* Added padding for a better look */
+  border: 5px solid rgb(86, 26, 26); /* Optional: Border for better visibility */
+  border-radius: 5px; /* Optional: Rounded corners */
+  box-sizing: border-box; /* Ensure padding doesn't affect dimensions */
+}
+
+.traversals {
+  margin-top: 50px;
+}
+
+.traversals select {
+  width: 200px; /* Increased width for the select box */
+  padding: 10px; /* Add some padding to make it more spacious */
+  font-size: 16px; /* Larger font size for better readability */
+  font-family: "Press Start 2P", sans-serif;
+  color: gray;
+  border-radius: 5px; /* Optional: To make the corners rounded */
+  border: 2px solid #ddd; /* Optional: Border for visibility */
+  background-color: #f0f0f0; /* Optional: Light background color */
+}
+
+.traversals label {
+  font-size: 16px; /* Make the label text size consistent */
+  margin-bottom: 5px; /* Add space below the label */
+  display: block; /* Ensure the label is displayed above the select */
+}
+
+.output {
+  margin-top: 20px;
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+}
+
+canvas {
+  border: 8px solid rgb(86, 26, 26);
+  margin-top: 20px;
+  width: 850px;
+  height: 550px;
+  background-color: white;
+  border-radius: 15px;
+  margin-right: 10px; /* Space from the right */
+  margin-top: 20px;
+  margin-bottom: -1000px;
+  padding: 20px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.traversal-container {
+  margin-top: 300px;
+  margin-left: -540px;
+  width: 880%;
+  max-height: 300px;
+  background-color: white;
+  border-radius: 12px;
+  font-size: 15px; /* Larger font for better readability */
+  font-family: "Press Start 2P", sans-serif;
+  color: gray;
+  padding: 5px; /* Added padding for a better look */
+  border: 5px solid rgb(86, 26, 26); /* Optional: Border for better visibility */
+  border-radius: 10px; /* Optional: Rounded corners */
+  box-sizing: border-box;
+  display: none;
+  overflow-y: scroll;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+#traversals {
+  width: 100%;
+  color: black;
+  font-size: 12px;
+}
+
+.vis-network {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.traversal-node {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #28c47b;
+  color: white;
+  font-size: 10px;
+  animation: bounce 0.5s ease-in-out;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Animation to show the message */
+@keyframes showMessage {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+    border-color: red;
+  }
+  50% {
+    opacity: 0.2;
+    border-color: transparent;
+  }
+  100% {
+    opacity: 1;
+    border-color: red;
+  }
+}
+
+.blinking {
+  animation: blink 1s infinite;
+}
+
+/* Apply the animation */
+#message.show {
+  animation: showMessage 2s forwards;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input {
+  margin-bottom: 10px;
+  width: 50%; /* Full width of the input section */
+}
+
+button {
+  padding: 10px 20px;
+  font-family: "Press Start 2P", sans-serif;
+  font-size: 10px;
+  background-color: white;
+  color: green;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  transform: translateY(-10px);
+  background-color: var(--clr-accent);
+  color: var(--clr-light);
+}

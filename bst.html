@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Binary Search Tree</title>
+    <link rel="stylesheet" href="bst.css" />
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="glow">Binary Search Tree</h1>
+    </div>
+    <div class="left-container">
+      <div class="input-section">
+        <label for="number">Enter a number:</label>
+        <input type="integer" class="input" id="value" />
+        <div class="buttons">
+          <button id="add">Add to Tree</button>
+          <button id="traverse">Traverse</button>
+          <button id="reset">Reset Tree</button>
+        </div>
+      </div>
+      <div class="traversal-container" id="traversalContainer">
+        <h2></h2>
+        <div id="inOrderOutput"></div>
+        <div id="preOrderOutput"></div>
+        <div id="postOrderOutput"></div>
+      </div>
+      <div class="output" id="output"></div>
+      <canvas id="treeCanvas" width="950" height="600"></canvas>
+    </div>
+
+    <script src="bst.js"></script>
+  </body>
+</html>

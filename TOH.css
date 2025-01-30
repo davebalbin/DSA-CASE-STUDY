@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('tohbg.png') no-repeat center center fixed; /* Set the background image */
+    background-size: cover; /* Cover the entire viewport */
+    font-family: 'Press Start 2P', cursive; /* Apply the imported font to the entire body */
+}
+
+.title-container h1 {
+    font-size: 60px; /* Adjusted font size for the title */
+    color: #000000; /* Neon green color */
+    text-shadow: 
+        0 0 5px #ffffff, /* Glow effect */
+        0 0 10px #ffffff, /* Glow effect */
+        0 0 15px #ffffff, /* Glow effect */
+        0 0 20px #ffffff; /* Glow effect */
+}
+
+.tower-container {
+    display: flex;
+    justify-content: space-between; /* Distribute space between towers */
+    width: 80%; /* Set a fixed width for the container */
+    margin: 0 auto; /* Center the container */
+}
+
+h1 {
+    font-size: 1.5em; /* Decreased font size for the title */
+    margin-bottom: 15px; /* Space below the title */
+}
+
+.tower-container {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-around; /* Space towers evenly */
+    margin: 20px 0; /* Add some margin above and below the towers */
+    width: 100%;
+    align-items: flex-end; /* Align towers to the bottom */
+}
+
+.tower {
+    width: 10px; /* Increased width of the pole */
+    height: 250px; /* Increased height of the pole */
+    background-color: #070707; /* Changed color of the pole */
+    border-radius: 5px; /* Rounded corners */
+    position: relative; /* Keep relative positioning for the tower */
+    margin: 0 10px; /* Margin for spacing */
+}
+
+.disk {
+    height: 25px; /* Height of the disk */
+    margin: 5px auto; /* Center the disk horizontally */
+    border-radius: 15px;
+    transition: all 0.5s ease; /* Smooth transition for movement */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    position: absolute; /* Position disks absolutely within the tower */
+    left: 50%; /* Center the disk horizontally */
+    transform: translateX(-50%); /* Adjust for the width of the disk */
+}
+
+.move-counter-container {
+    text-align: center; /* Center the text */
+    margin-top: 20px; /* Space above the move counter */
+    width: 25%; /* width */
+    height: 30px; /* Set a specific height for the move counter */
+    margin: 20px auto; /* Center the move counter */
+    display: flex; /* Use flexbox to center content */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    background-color: #ffffff; /* White background for the counter */
+    border: 2px solid #333; /* Border for the counter */
+    border-radius: 10px; /* Rounded corners */
+    padding: 5px; /* Padding inside the counter */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    font-size: 0.6em; /* Smaller font size for the move counter */
+}
+
+.button-container {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-around; /* Space buttons evenly */
+    margin-top: 20px; /* Space above the buttons */
+}
+
+.move-button {
+    font-family: 'Press Start 2P', cursive; /* Apply the imported font */
+    width: 150px; /* Width of the button */
+    padding: 5px; /* Padding for the button */
+    background-color: #000000;
+    color: white;
+    border: white;
+    border-radius: 0px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 0.9em; /* Smaller font size for buttons */
+}
+
+.move-button:hover {
+    background-color: #002400;
+}

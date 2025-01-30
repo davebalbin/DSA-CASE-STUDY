@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="TOH.css">
+    <title>TOWER OF HANOI</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="title-container"> <!-- New container for the title -->
+            <h1>TOWER OF HANOI</h1>
+        </div>
+        <div class="tower-container">
+            <div class="tower" id="tower1"></div>
+            <div class="tower" id="tower2"></div>
+            <div class="tower" id="tower3"></div>
+        </div>
+        <div class="move-counter-container">
+            <h2>Moves: <span id="moveCount">0</span></h2>
+        </div>
+        <div class="button-container">
+            <button class="move-button" onclick="moveDisk(1)">Move Disk</button>
+            <button class="move-button" onclick="moveDisk(2)">Move Disk</button>
+            <button class="move-button" onclick="moveDisk(3)">Move Disk</button>
+        </div>
+    </div>
+    <script src="TOH.js"></script>
+</body>
+</html>

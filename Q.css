@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  margin: 0; /* Remove default margin */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center vertically */
+  background: url("CEA.png");
+  background-size: cover;
+  background-position: center;
+  font-family: "Press Start 2P", sans-serif;
+  color: white;
+}
+
+.garage-container {
+  width: 453px; /* Adjusted width */
+  height: 300px;
+  padding: 45px;
+  background-color: #002211;
+  border: 5px solid #000000;
+  border-radius: 5px; /* Slightly rounded corners */
+}
+
+.car-front-glass {
+  width: 450px; /* Full width of the container */
+  height: 250px; /* Adjusted height */
+  background-color: #000000;
+  border-radius: 0px; /* Slightly rounded corners */
+  border: 2px solid #000000;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column; /* Stack elements vertically */
+}
+
+.steering-wheel {
+  width: 100px; /* Adjusted width */
+  height: 26px; /* Adjusted height */
+  background-color: transparent; /* Make the steering wheel transparent */
+  border-radius: 50%; /* Change to 50% for a circular shape */
+  position: absolute;
+  outline: none;
+  left: 50%;
+  bottom: -60px; /* Adjusted position */
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.steering-input {
+  width: 150px; /* Adjusted width */
+  height: 30px; /* Adjusted height */
+  padding: 10px; /* Adjusted padding */
+  font-size: 14px; /* Adjusted font size */
+  font-family: 'Press Start 2P', sans-serif;
+  border-radius: 0px;
+  text-align: center;
+  background-color: black; /* Make the input transparent */
+  color: white; /* Ensure text is visible */
+}
+
+.car-front-mirror {
+  width: 454px; /* Full width of the container */
+  height: 50px; /* Adjusted height */
+  background-color: rgb(0, 15, 3);
+  border-radius: 0px; /* Slightly rounded corners */
+  border: 0px solid #002211;
+  position: absolute;
+  top: -30px; /* Adjusted position */
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 10px;
+  text-align: center;
+  line-height: 50px;
+  overflow: hidden; /* Hide overflow for animation */
+}
+
+.welcome-message {
+  animation: fadeIn 1s infinite; /* Animation for welcome message */
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.message-display {
+  color: lightgreen; /* Color for the message display */
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 14px;
+  margin-top: 10px; /* Space between the mirror and message */
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px; /* Adjusted margin */
+}
+
+.control-button {
+  width: 140px; /* Adjusted width */
+  height: 50px; /* Adjusted height */
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 0px; /* Slightly rounded corners */
+  font-size: 16px;
+  font-family: 'Press Start 2P', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.control-button:hover {
+  background-color: lightgreen;
+}
+
+/* Car Visual Styles */
+.car-visuals {
+  position: absolute;
+  right: 30px; /* Position it 30px from the right side */
+  bottom: 30px; /* Position it 30px from the bottom of the container */
+  display: flex;
+  flex-direction: row; /* Stack cars horizontally */
+  align-items: flex-end; /* Align cars to the bottom */
+  overflow-x: auto; /* Allow horizontal scrolling if there are too many cars */
+}
+
+@keyframes slideIn {
+  0% {
+      transform: translateX(-150%); /* Start off-screen to the left */
+      opacity: 0; /* Start invisible */
+ }
+  100% {
+      transform: translateX(0); /* End at its original position */
+      opacity: 1; /* Fully visible */
+  }
+}
+
+.car {
+  width: 120px; /* Width of the car */
+  height: 50px; /* Height of the car */
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the image */
+  position: relative; /* Make the car a positioning context for the plate */
+  margin-right: 10px; /* Space between cars */
+  animation: slideIn 0.5s ease-out; /* Apply the slide-in animation */
+}
+
+.car-plate {
+  position: absolute; /* Position the plate absolutely within the car */
+  bottom: 20px; /* Position the plate below the car */
+  left: 50%; /* Center the plate horizontally */
+  transform: translateX(-50%); /* Adjust to center the plate */
+  color: rgb(255, 255, 255); /* Plate text color */
+  padding: 2px 5px; /* Padding for the plate */
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 8px; /* Font size for the plate */
+  border-radius: 0px; /* Rounded corners for the plate */
+  background-color: rgba(0, 0, 0, 0.8); /* Optional: Slightly transparent background for readability */
+  text-align: center; /* Center text */
+}

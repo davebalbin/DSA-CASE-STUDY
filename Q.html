@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue Garage System</title>
+    <link rel="stylesheet" href="Q.css">
+</head>
+<body>
+    <div class="garage-container">
+        <div class="car-front-glass">
+            <!-- Steering Wheel with Text Input -->
+            <div class="steering-wheel">
+                <input type="text" class="steering-input" id="plateInput" placeholder="">
+            </div>
+            <!-- Car Front Mirror -->
+            <div class="car-front-mirror" id="mirror">
+                <div class="welcome-message" id="welcomeMessage">WELCOME TO PUP-CEA PARKING GARAGE</div>
+            </div>
+            <!-- Message Display -->
+            <div class="message-display" id="messageDisplay"></div>
+        </div>
+        <!-- Buttons -->
+        <div class="button-container">
+            <button class="control-button" onclick="handleCarArrival()">A</button>
+            <button class="control-button" onclick="handleCarDeparture()">D</button>
+        </div>
+    </div>
+
+
+    <!-- Car Visuals Container -->
+    <div class="car-visuals" id="carVisuals">
+        <!-- Individual car visuals will be added here -->
+    </div>
+
+    <!-- Script -->
+    <script src="Q.js"></script>
+</body>
+</html>

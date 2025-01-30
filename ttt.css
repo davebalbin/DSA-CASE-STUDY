@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); /* Import pixelated font */
+
+body {
+    font-family: 'Press Start 2P', cursive; /* Pixelated font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('tttbg.png'); /* Ensure this path is correct */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    
+}
+
+.title {
+    font-size: 2.3em; /* Adjust the size as needed */
+    color: #000000; /* Neon green color */
+    text-shadow: 
+        0 0 5px #ffffff, 
+        0 0 10px #ffffff, 
+        0 0 15px #ffffff, 
+        0 0 20px #ffffff, 
+        0 0 25px #ffffff; /* Neon glow effect */
+    margin-bottom: 20px; /* Space below the title */
+    text-align: center; /* Center the title */
+}
+
+.main-container {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items */
+    width: 450px; /* Set a fixed width (adjust as needed) */
+    height: 510px; /* Set a fixed height (adjust as needed) */
+    overflow: hidden; /* Prevent overflow */
+    border: 2px solid #000; /* Optional: Add a border for visibility */
+    border-radius: 10px; /* Optional: Rounded corners */
+    background-color: rgba(219, 219, 219, 0.5); /* Adjusted for transparency (0.5 is 50% transparent) */
+    margin-right: 40px; /* Increased space between the board and scoreboard */
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 120px); /* Increased cell size */
+    grid-template-rows: repeat(3, 120px); /* Increased cell size */
+    gap: 2px;
+}
+
+.cell {
+    width: 120px; /* Increased width */
+    height: 120px; /* Increased height */
+    background-color: #000000; /* Default cell color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em; /* Larger font size for better visibility */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s; /* Add transform for click effect */
+    border: 5px solid #ffffff; /* Black border for pixelated effect */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+.cell:hover {
+    background-color: #ffcc00; /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.cell.x {
+    color: #ff3305; /* Color for X */
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5); /* Add shadow for better visibility */
+}
+
+.cell.o {
+    color: #00b3ff; /* Color for O */
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5); /* Add shadow for better visibility */
+}
+
+.reset-button {
+    margin-top: 5px;
+}
+
+.status {
+    margin-top: 5px; /* Space between board and status */
+    text-align: center; /* Center align text */
+    height: 30px; /* Reduced height for status */
+}
+
+.status .turn {
+    font-weight: bold;
+}
+
+.turn-x {
+    color: red; /* Color for Player X's turn */
+}
+
+.turn-o {
+    color: blue; /* Color for Player O's turn */
+}
+
+.scoreboard {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50px; /* Increased padding for more space */
+    margin-top: 100px; /* Space above the scoreboard */
+    width: 300px; /* Increased width */
+    height: auto; /* Allow height to adjust based on content */
+
+}
+.scoreboard h2 {
+    margin: 2;
+    font-size: 2em; /* Increased font size for the heading */
+    color: #ffffff; /* Neon yellow color */
+    text-shadow: 
+        0 0 5px #000000, 
+        0 0 10px #000000, 
+        0 0 15px #3d3d3d, 
+        0 0 20px #3d3d3d, 
+        0 0 25px #3d3d3d; /* Glowing effect */
+}
+
+.scoreboard div {
+    margin: 5px 0; /* Increased margin for better spacing */
+    font-size: 1.5em; /* Increased font size for scoreboard entries */
+    color: #ffffff; /* Neon blue color */
+    text-shadow: 
+        0 0 5px #000000, 
+        0 0 10px #000000, 
+        0 0 15px #000000, 
+        0 0 20px #000000, 
+        0 0 25px #000000; /* Glowing effect */
+}

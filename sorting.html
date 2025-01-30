@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SORTING</title>
+    <link rel="stylesheet" href="sorting.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h1 class="neon-text">SORTING</h1> <!-- Neon effect applied here -->
+        <div class="input-container">
+            <textarea id="inputNumbers" placeholder="Please Enter 30 integers separated by commas"></textarea>
+            <button onclick="startSorting()">Sort</button>
+        </div>
+        
+        <div class="tabs">
+            <button class="tablinks" onclick="openTab(event, 'BubbleSort')">Bubble Sort</button>
+            <button class="tablinks" onclick="openTab(event, 'InsertionSort')">Insertion Sort</button>
+            <button class="tablinks" onclick="openTab(event, 'SelectionSort')">Selection Sort</button>
+            <button class="tablinks" onclick="openTab(event, 'MergeSort')">Merge Sort</button>
+            <button class="tablinks" onclick="openTab(event, 'ShellSort')">Shell Sort</button>
+            <button class="tablinks" onclick="openTab(event, 'QuickSort')">Quick Sort</button>
+            <button class="tablinks" onclick="openTab(event, 'HeapSort')">Heap Sort</button>
+        </div>
+
+        <div id="BubbleSort" class="tabcontent output"></div>
+        <div id="InsertionSort" class="tabcontent output"></div>
+        <div id="SelectionSort" class="tabcontent output"></div>
+        <div id="MergeSort" class="tabcontent output"></div>
+        <div id="ShellSort" class="tabcontent output"></div>
+        <div id="QuickSort" class="tabcontent output"></div>
+        <div id="HeapSort" class="tabcontent output"></div>
+    </div>
+    <script src="sorting.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>

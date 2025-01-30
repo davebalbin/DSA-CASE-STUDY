@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    font-family: 'Press Start 2P', cursive; /* Apply the imported font */
+    margin: 0;
+    padding: 0;
+    background-image: url('sortingbg.png'); /* Replace with your image path */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Prevent the background from moving */
+    display: flex; /* Use Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    flex-direction: column; /* Stack elements vertically */
+}
+.input-container {
+    display: flex; /* Use Flexbox for the container */
+    flex-direction: column; /* Stack textarea and button vertically */
+    align-items: center; /* Center items horizontally */
+}
+.neon-text {
+    font-size: 48px; /* Size of the text */
+    text-align: center; /* Center the text */
+    color: #000000; /* Neon green color */
+    text-shadow: 
+        0 0 5px #ffffff, 
+        0 0 10px #ffffff, 
+        0 0 15px #ffffff, 
+        0 0 20px #ffffff, 
+        0 0 25px #ffffff, 
+        0 0 30px #ffffff, 
+        0 0 35px #ffffff; /* Multiple shadows for glowing effect */
+}
+
+.output {
+    max-height: 300px; /* Set a maximum height for the output area */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-top: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+textarea {
+    width: 50%; /* Adjust this width as needed */
+    height: 100px;
+    margin-bottom: 10px;
+    margin-left: auto; /* Center the textarea */
+    margin-right: auto; /* Center the textarea */
+}
+
+button {
+    width: 50%; /* Adjust this width as needed */
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    margin-left: auto; /* Center the button */
+    margin-right: auto; /* Center the button */
+    font-family: 'Press Start 2P', cursive; /* Apply the same font */
+    font-size: 8px; /* Adjust this value to make the font smaller */
+}
+
+button:hover {
+    background-color: #a1665e;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.tablinks {
+    background-color: #242424;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tablinks:hover {
+    background-color: #a1665e;
+}
+
+.tabcontent {
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
+    border: 5px solid #000000da;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+.number-box {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: #ecbcb4;
+    font-weight: bold;
+    color: #000000;
+}
+
+.number-box.sorted {
+    background-color: #28a745; /* Green for sorted numbers */
+    color: white;
+}
+
+.number-box.unsorted {
+    background-color: #dc3545; /* Red for unsorted numbers */
+    color: white;
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 600px) {
+    .input-container {
+        width: 90%; /* Make the container responsive */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Adjust heading size for smaller screens */
+    }
+
+    button {
+        padding: 8px; /* Adjust button padding for smaller screens */
+    }
+
+    textarea {
+        height: 80px; /* Adjust textarea height for smaller screens */
+    }
+}
